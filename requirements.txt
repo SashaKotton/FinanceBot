@@ -1,2 +1,5 @@
 aiogram
 python-dotenv
+asyncio
+pydantic
+pydantic_settings
