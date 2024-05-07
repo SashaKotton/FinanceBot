@@ -30,6 +30,6 @@ async def reg_second(message, state):
     await state.update_data(user_id = contact.user_id)
     await state.update_data(user_fullname = message.from_user.full_name)
     user_data = await state.get_data()
-    await message.answer(f'Спасибо за регистрацию.\nВаш номер {user_data['user_contact']}')
-
+    await message.answer('Спасибо за регистрацию!', reply_markup=ReplyKeyboardRemove())
+    await state.clear()
     
